@@ -22,7 +22,7 @@ const viewUsernames = async (message) => {
 		(acc, cur, i) => `${acc}${i + 1} - \`${cur}\`\n`,
 		""
 	);
-	await message.reply(usernameStr ?? "No username added yet.");
+	await message.reply(usernameStr || "No username added yet.");
 };
 
 const writeToJson = async function (data) {
